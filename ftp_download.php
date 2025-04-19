@@ -7,8 +7,8 @@ if (!isset($_SESSION['username'])) {
 
 // Datos de conexión al FTP
 $ftp_server = "localhost";
-$ftp_user   = "7days";
-$ftp_pass   = "35027595*";
+$ftp_user = "USUARIO";
+$ftp_pass = "CONTRASEÑA";
 
 // Validar que venga el parámetro 'file'
 if (!isset($_GET['file'])) {
