@@ -7,8 +7,8 @@ if (!isset($_SESSION['username'])) {
 
 // Configuración del servidor FTP
 $ftp_server = "localhost";
-$ftp_user = "7days";
-$ftp_pass = "35027595*";
+$ftp_user = "USUARIO";
+$ftp_pass = "CONTRASEÑA";
 $ftp_conn = ftp_connect($ftp_server) or die("No se pudo conectar al servidor FTP");
 $login = ftp_login($ftp_conn, $ftp_user, $ftp_pass);
 
