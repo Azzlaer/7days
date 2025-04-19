@@ -1,7 +1,7 @@
 <?php
 $host = '127.0.0.1';
 $port = 8086;
-$password = '35027595*';
+$password = 'CONTRASEÑA';
 $comando = trim($_POST['comando'] ?? '');
 
 $logFile = 'telnet_log.txt';
