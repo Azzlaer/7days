@@ -1,0 +1,60 @@
+body {
+    background-color: #1b1b1b;    
+    font-family: "Courier New", monospace;	
+    margin: 0;
+    padding: 0;
+    background: url('assets/images/wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+h1, h2 {
+    color: #a9d18e;
+}
+
+.status {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.online {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.offline {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    background: #2e2e2e;
+    color: #f1f1f1;
+    border: 1px solid #444;
+    padding: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.start {
+    background-color: #4caf50;
+    color: white;
+}
+
+.stop {
+    background-color: #f44336;
+    color: white;
+}
+
+.save {
+    background-color: #2196f3;
+    color: white;
+}
