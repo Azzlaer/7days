@@ -2,8 +2,8 @@
 
 // Configuración del servidor FTP
 $ftp_server = "localhost";
-$ftp_user = "USUARIO";
-$ftp_pass = "CONTRASEÑA";
+$ftp_user   = "7days";
+$ftp_pass   = "35027595*";
 
 // Conexión al servidor FTP
 $ftp_conn = ftp_connect($ftp_server) or die("No se pudo conectar al servidor FTP");

@@ -27,6 +27,10 @@ $configContent = readConfigFile($configPath);
 $modsCount = countMods($modsPath);
 ?>
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,6 +46,12 @@ function abrirVentanaConfigFTP() {
 }
 function abrirVentanaConfigUsers() {
     window.open('players.php', '_blank', 'width=900,height=700,scrollbars=yes');
+}
+function abrirVentanaConfigPanel() {
+    window.open('http://latinbattlex.servegame.com:4780', '_blank', 'width=900,height=700,scrollbars=yes');
+}
+function abrirVentanaConfigPanelADM() {
+    window.open('admins.php', '_blank', 'width=900,height=700,scrollbars=yes');
 }
 </script>
 
@@ -62,6 +72,7 @@ body {
 }
 </style>
 <body>
+
     <h1>🧟 Panel de Control: 7 Days to Die</h1>
 
     <div class="status">
@@ -71,19 +82,27 @@ body {
         </span>
     </div>
 
-    <form method="post">
-        <button type="submit" name="start" class="btn start">Iniciar Servidor</button>
-		<button type="submit" name="shutdown" class="btn shutdown">Apagar Servidor</button>
-        <button type="submit" name="stop" class="btn stop">Terminar Servidor (Force)</button>
+
+
+
+
+<?php if (!empty($message)): ?>
+    <p style="color: lime; font-weight: bold;"><?= htmlspecialchars($message) ?></p>
+<?php endif; ?>
+
+
+		
     </form>
 
 	<h1><span style="text-decoration: underline;">Configuraciones</span></h1>
     <h2>📝 Configuración del Servidor <button onclick="abrirVentanaConfig()" class="boton-editar">Editar Configuración</button></h2>
 	<h2>📝 Telnet Consola <button onclick="abrirVentanaConfigTelnet()" class="boton-editar">Usar Telnet</button></h2>
 	<h2>📝 FTP Manager <button onclick="abrirVentanaConfigFTP()" class="boton-editar">Usar FTP Manager</button></h2>
+	<h2>📝 Admin Panel <button onclick="abrirVentanaConfigPanelADM()" class="boton-editar">Usar ADM Panel</button></h2>	
+	<h2>📝 7DTD Panel <button onclick="abrirVentanaConfigPanel()" class="boton-editar">Usar Panel Manager</button></h2>
 	<h2>📝 Users Manager <button onclick="abrirVentanaConfigUsers()" class="boton-editar">Usar Users Manager</button></h2>
-
 	<h1><span style="text-decoration: underline;">Estad&iacute;sticas de Partidas</span></h1>
+	<h2>🧍‍♂️ Jugadores Online <button onclick="window.open('jugadores_online.php', '_blank', 'width=800,height=600');" class="boton-editar">Ver Usuarios Online</button></h2>
     <h2>📦 Cantidad de Mods: <?= $modsCount ?></h2>
 	<?php
 $directorio = 'C:/Users/Guardia/AppData/Roaming/7DaysToDie/Saves/Pregen06k4/guardia/Player';

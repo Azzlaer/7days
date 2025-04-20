@@ -1,9 +1,4 @@
 <?php
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
-}
 
 // Indica la ruta real local donde se encuentran los archivos
 $base_dir = "C:\\Games\\mta\\mods\\deathmatch\\resources";

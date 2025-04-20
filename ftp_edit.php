@@ -1,14 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
-}
 
 // Configuración del servidor FTP
 $ftp_server = "localhost";
-$ftp_user = "USUARIO";
-$ftp_pass = "CONTRASEÑA";
+$ftp_user = "7days";
+$ftp_pass = "35027595*";
 $ftp_conn = ftp_connect($ftp_server) or die("No se pudo conectar al servidor FTP");
 $login = ftp_login($ftp_conn, $ftp_user, $ftp_pass);
 
@@ -54,7 +49,7 @@ unlink($temp_file);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    
     <div class="container mt-5">
         <h2>Editando: <?= basename($file_path); ?></h2>
         <form method="post">

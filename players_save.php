@@ -36,5 +36,5 @@ foreach ($xml->player as $player) {
     }
 }
 
-$xml->asXML('C:\Users\Guardia\AppData\Roaming\7DaysToDie\Saves\Pregen06k4\guardia\players.xml');
+$xml->asXML('players.xml');
 echo "Cambios guardados. <a href='players.php'>Volver</a>";

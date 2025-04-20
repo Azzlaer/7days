@@ -1,7 +1,7 @@
 <?php
 $host = '127.0.0.1'; // o la IP del servidor si está en otra máquina
 $port = 8086;        // asegúrate de que coincida con el puerto de telnet configurado
-$password = 'CONTRASEÑA*'; // cambia esto por tu contraseña real
+$password = '35027595*'; // cambia esto por tu contraseña real
 
 $salida = '';
 $comando = '';

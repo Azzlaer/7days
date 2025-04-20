@@ -1,5 +1,5 @@
 <?php
-$xml = simplexml_load_file('C:\Users\Guardia\AppData\Roaming\7DaysToDie\Saves\Pregen06k4\guardia\players.xml');
+$xml = simplexml_load_file('C:\\Users\\Guardia\\AppData\\Roaming\\7DaysToDie\\Saves\\Pregen06k4\\guardia\\players.xml');
 $userid = $_GET['userid'] ?? '';
 $selected = null;
 
@@ -22,7 +22,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 20px;
-    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* textura oscura */
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
 }
 
 h2 {
@@ -96,12 +96,36 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.zombie-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid #1c642d;
+    box-shadow: 0 0 5px #1c642d;
+}
+
+.zombie-button:hover {
+    background-color: #34d058;
+    box-shadow: 0 0 15px limegreen;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+}
 </style>
+
 <h2>Editar Jugador: <?= htmlspecialchars($selected['playername']) ?></h2>
 <form method="post" action="players_save.php">
     <input type="hidden" name="userid" value="<?= htmlspecialchars($selected['userid']) ?>">
 
     <p><b>Datos básicos:</b></p>
+    UserID: <input type="text" name="userid_visible" value="<?= htmlspecialchars($selected['userid']) ?>" readonly><br>
+    NativeUserID: <input type="text" name="nativeuserid" value="<?= htmlspecialchars($selected['nativeuserid']) ?>"><br>
     Playername: <input type="text" name="playername" value="<?= htmlspecialchars($selected['playername']) ?>"><br>
     Native Platform: <input type="text" name="nativeplatform" value="<?= htmlspecialchars($selected['nativeplatform']) ?>"><br>
     Last Login: <input type="text" name="lastlogin" value="<?= htmlspecialchars($selected['lastlogin']) ?>"><br><br>
@@ -127,4 +151,5 @@ a:hover {
     <?php endforeach; ?>
 
     <input type="submit" value="Guardar cambios">
+    <a href="players.php" class="zombie-button">🏠 Volver al Inicio</a>
 </form>

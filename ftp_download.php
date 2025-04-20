@@ -1,14 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
-}
 
 // Datos de conexión al FTP
 $ftp_server = "localhost";
-$ftp_user = "USUARIO";
-$ftp_pass = "CONTRASEÑA";
+$ftp_user   = "7days";
+$ftp_pass   = "35027595*";
 
 // Validar que venga el parámetro 'file'
 if (!isset($_GET['file'])) {
